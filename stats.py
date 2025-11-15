@@ -12,6 +12,7 @@ def count_words(path_to_file):
     for word in words:
         word_count += 1
     print(f"Found {word_count} total words")
+    return word_count
 
 #This function counts the characters in the path_to_file and returns a dictionary
 #This is irrelevant now that count_and_sort_chars exists

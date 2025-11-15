@@ -1,13 +1,11 @@
 #This file contains functions for analyzing the text.
 
-path_to_file = "books/frankenstein.txt"
-
 def get_book_text(path_to_file):
     with open(path_to_file) as f:
         text = f.read()
     return text
 
-def count_words():
+def count_words(path_to_file):
     text = get_book_text(path_to_file)
     words = text.split()
     word_count = 0
@@ -16,7 +14,8 @@ def count_words():
     print(f"Found {word_count} total words")
 
 #This function counts the characters in the path_to_file and returns a dictionary
-def count_chars():
+#This is irrelevant now that count_and_sort_chars exists
+def count_chars(path_to_file):
     text = get_book_text(path_to_file)
     lowercase_text = text.lower()
     chars = list(lowercase_text)
@@ -29,8 +28,10 @@ def count_chars():
     print(char_dict)
     return char_dict
 
-#This function counts the characters in the path_to_file and returns a list of sorted dictionaries
-def count_and_sort_chars ():
+
+#This function counts the characters in the path_to_file and returns a list of sorted dicts
+#It also prints the values of each dict
+def count_and_sort_chars (path_to_file):
     text = get_book_text(path_to_file)
     lowercase_text = text.lower()
     chars = list(lowercase_text)

@@ -4,12 +4,12 @@ from stats import count_words
 
 from stats import path_to_file
 
-from stats import count_chars
+from stats import count_and_sort_chars
 
 print("============ BOOKBOT ============")
 print(f"Analyzing book found at {path_to_file}...")
 print("----------- Word Count ----------")
 count_words()
 print("--------- Character Count -------")
-count_chars()
+count_and_sort_chars()
 print("============= END ===============")
